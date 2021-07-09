@@ -1,0 +1,815 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/* Loading page start */
+
+.main{
+    height: 100vh;
+    width: 100vw;
+    background-color: #16c9f6;
+    display: grid;
+    place-items: center;
+}
+.load{
+    width: 100px;
+    height: 100px;
+}
+.move{
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid black;
+    border-right: 3px solid #fff;
+    animation: ro 4s linear infinite;
+}
+@keyframes ro{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+.load h2{
+    position: absolute;
+    color: honeydew;
+    font-size: 15px;
+    font-family:' Potta One', cursive;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) ;
+}
+/* loading page end */
+
+/*......... Home page .......*/
+
+.mydiv{
+    max-width: 100%;
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-image: linear-gradient(rgba(0,168,255,0.3 ),rgba(0,168,255));
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    clip-path: polygon(100% 0%, 100% 85% , 50% 100%, 0 85%, 0 0 );
+    position: relative;
+} 
+/* #header{
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    top: 0;
+    width: 100%;
+} */
+
+/*......... Logo .........*/
+#logo{
+    margin-left: 10px;
+    height: 90px;
+    width: 350px;
+}
+
+/* .......nav elements Home, About us ,Contact us...... */
+
+.nav-1{
+    font-size: 20px;
+    font-family: 'Syne Mono', monospace;
+    padding-left: 100px;
+}
+.nav-1>ul>li{
+    font-weight: bold;
+    list-style: none;
+    display: inline;
+    padding-top: 10px;
+    padding-left: 15px;
+}
+.nav-1>ul>li>a:hover{
+    background-color: #16c9f6;
+    border-radius: 5px;
+    color: white;
+}
+.nav-1>ul>li>a{
+    text-decoration: none;
+    border: 1px solid #16c9f6;
+    padding: 7px;
+    border-radius: 5px;
+    color: rgb(44, 3, 3);
+}
+.nav-1>ul>li>a > i{
+    padding: 3px;
+}
+
+.active{
+    color: #fff;
+    background-color: #16c9f6;
+}
+
+.nav-mob{
+    font-size: 25px;
+    font-family: 'Syne Mono', monospace;
+}
+.nav-mob>ul>li{
+    display: inline-block;
+    list-style: vertical;
+    line-height: 30px;
+    padding: 3px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    list-style: none;
+}
+.nav-mob>ul>li>a{
+    display: inline-block;
+    width: 200px;
+    list-style: column;
+    text-decoration: none;
+    border: 1px solid #16c9f6;
+    padding: 7px;
+    border-radius: 5px;
+    color: rgb(44, 3, 3);
+}
+.nav-mob>ul>li>a:hover{
+    background-color: #16c9f6;
+    border-radius: 5px;
+    color: white;
+}
+.nav-mob>ul>li>a > i{
+    padding: 3px;
+}
+.nav-mob{
+    display: none;
+}
+#cros{
+    display: none;
+}
+#bar{
+    display: none;
+} 
+
+@media screen and (max-width:768px){
+    #bar,#cros{
+        cursor: pointer;
+        display: block;
+        font-size: 50px;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+    /* #nav-mob > ul > li > a{
+        color: #262626;
+        float: left;
+        padding-left: 0%;
+        
+    } */
+
+    #bar{
+        z-index: 1;
+        color: #075e74;
+    }
+    #cros{
+        display: none;
+        z-index: 2;
+        color: crimson;
+    }
+
+    .nav-1>ul>li{
+        display: none;
+    }
+
+
+}
+@media screen and (min-width:520px){
+    .nav-mob>ul>li>a{
+        display: inline-block;
+        width: 300px;
+        text-decoration: none;
+        border: 1px solid #16c9f6;
+        padding: 7px;
+        border-radius: 5px;
+        color: rgb(44, 3, 3);
+    }
+}
+
+@media screen and (min-width:765px) {
+    .nav-mob>ul>li{
+        display: inline-block;
+        list-style: vertical;
+        line-height: 30px;
+        padding: 3px 20px;
+        font-weight: bold;
+        text-decoration: none;
+        list-style: none;
+    }
+    .nav-mob>ul>li>a{
+        display: inline-block;
+        width: 400px;
+        text-decoration: none;
+        border: 1px solid #16c9f6;
+        padding: 7px;
+        border-radius: 5px;
+        color: rgb(44, 3, 3);
+    }
+}
+
+/* #cnavbar>ul>li>a{
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px;
+}
+#cnavbar>ul>li>a:after {
+    display:block;
+    content: '';
+    border-bottom: solid 3px #16c9f6;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+}
+#cnavbar>ul>li>a:hover:after { transform: scaleX(1); }
+#cnavbar>ul>li>a.fromRight:after{ transform-origin:100% 50%; }
+#cnavbar>ul>li>a.fromLeft:after{  transform-origin:  0% 50%; }
+ */
+/*..... nav elements Home, About us ,Contact us  closed.....*/
+
+
+
+/* .........Home page part 2 ..........*/
+#txts{
+    display: block;
+    align-items: center;
+    text-align: left;
+    padding-left: 100px;
+    padding-top: 130px;
+}
+#txts>h1{
+    font-size: 50px;
+    font-family: 'Reggae One', cursive;
+    font-weight: 600;
+    
+}
+#txts>p{
+    font-size: 20px;
+}
+
+#imag{
+    padding:20px 0 ;
+}
+#imag>img{
+    height: 600px;
+    width: 700px;
+    padding-bottom: 100px;
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+} 
+#bttn{
+    text-decoration: none;
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+#bttn:hover{
+    background: #563434;
+}
+/*............. Home page part 2  closed........*/
+
+
+
+
+
+
+/* Floating  social media start */
+.icon-bar {
+	position: fixed;
+	top: 83%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	z-index: 10;
+}
+
+.icon-bar >a {
+	text-decoration: none;
+	width: 220px;
+	border-radius: 5px;
+	color: #fff;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 5px;
+	font-size: 20px;
+	transform: translateX(-170px);
+	-webkit-transform: translateX(-170px);
+	-ms-transform: translateX(-170px);
+	transition: all 0.5s linear;
+	-webkit-transition: all 0.5s linear;
+	-ms-transition: all 0.5s linear;
+}
+
+.facebook {
+	background: #3b5998;
+}
+
+
+.twitter {
+	background: #00aced;
+}
+
+.instagram {
+	background: #e4405f;
+}
+
+.linkedin {
+	background: #0077B5;
+}
+
+
+.icon-bar> a i {
+	padding-left: 20px;
+	font-size: 30px !important;
+	animation: letszoom 2s linear alternate-reverse infinite;
+}
+
+@keyframes letszoom {
+	from {
+		transform: scale(0.8);
+	}
+
+	to {
+		transform: scale(1);
+	}
+
+}
+
+.icon-bar a:hover {
+    color: #fff;
+	transform: translateX(0);
+	-webkit-transform: translateX(0);
+	-ms-transform: translateX(0);
+}
+
+
+
+/* Floating  social media end */
+
+
+
+
+/* Floating  form start */
+#form {
+	position: fixed;
+	top: 70%;
+    right: 0px;
+    border-radius: 5px;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	z-index: 10;
+}
+.all{
+    display: flex;
+    transform: translateX(230px);
+	-webkit-transform: translateX(230px);
+	-ms-transform: translateX(230px);
+	transition: all 0.5s linear;
+	-webkit-transition: all 0.5s linear;
+	-ms-transition: all 0.5s linear;
+}
+.apply{
+    height: 230px;
+    position: fixed;
+    font-weight: 600;
+    top: 50%;
+    right: 230px;
+    border-radius: 5px;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	z-index: 10;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+    color: #fff;
+    background: black;
+    /*animation: letszoom 2s linear alternate-reverse infinite;*/
+}
+.apply >i{
+    cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    color: #16c9f6;
+    font-size: 23px;
+    animation: letszom 2s linear alternate-reverse infinite;
+}
+@keyframes letszom {
+	from {
+		transform: scale(0.8);
+	}
+
+	to {
+		transform: scale(1);
+	}
+
+}
+#cross{
+    display: none;
+}
+
+.form-group {
+	border-radius: 5px;
+	align-items: center;
+	padding: 5px;
+	font-size: 15px;
+	
+}
+/* .all:hover{
+    transform: translateX(0px);
+	-webkit-transform: translateX(0px);
+	-ms-transform: translateX(0px);
+} */
+
+/* Floating form end */
+
+
+
+
+
+
+/* ...............service Page start................. */
+
+.service{
+    padding: 100px 0px 60px;
+    
+}
+
+
+/* ....Title of service page..... */
+.service h1{
+    font-size: 35px;
+    font-family: 'Reggae One', cursive;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.service h1:before, .service h1:after {
+    content: "";
+    flex: 0.4 1;
+    border-bottom: 3px solid cornflowerblue;
+    margin: auto;
+}
+/* .......Title of service page close..... */
+
+/* .......Paragraph for service page....... */
+.service>p{
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+/* .......Paragraph for service page close .... */
+
+/* .....div of rowsetting */
+.rowsetting{
+    margin-top: 80px;
+    padding: 0px;
+    margin-bottom: 20px;
+    align-items: center;
+    background: #16c9f6;
+}
+
+.rowsetting h2{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Reggae One', cursive;
+}
+.rowsetting p{
+    padding: 10px;
+    color: #101111;
+}
+/*....... div of rowsetting close....... */
+
+/* .....Icon/image setting....... */
+.imgsetting img{
+    height: 220px;
+    width: 100%;
+}
+/* .....Icon/image setting closed....... */
+
+/* .....id  service-hover...... */
+#ser-hover{
+    margin-bottom: 25px;
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+#ser-hover:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    transform: translateY(-20px);
+}
+/* ......id  service-hover close ......... */
+
+
+
+
+
+
+
+
+
+/* .......service2 start .......*/
+
+
+#service2{
+    margin: 50px;
+    /* background: rgb(69, 123, 221);
+    -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%); */
+    position: relative;
+}
+#service2:before{
+    content: "";
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background: linear-gradient(200deg, #16c9f6 65%,#fff 0%);
+}
+/*.....id for serv2........ */
+#serv2{
+    text-align: left;
+    
+}
+#serv2>h2{
+    font-weight: 570;
+}
+#serv2>p{
+    color: rgb(17, 17, 17);
+}
+/* .......service2 closed .......*/
+
+
+
+
+/* ...............service Page closed................. */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ......Service----- page start............. */
+.diagonal{
+    position: relative;
+}
+.diagonal:before{
+    content: "";
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background: linear-gradient(160deg, #16c9f6 55%,#fff 0%);
+}
+
+.diagonal h1{
+    font-size: 35px;
+    font-family: 'Reggae One', cursive;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.diagonal h1:before, .diagonal h1:after {
+    content: "";
+    flex: 0.4 1;
+    border-bottom: 3px solid rgb(227, 231, 240);
+    margin: auto;
+}
+
+#ser-btn{
+    padding: 10px 15px;
+    margin: 10px;
+}
+.project{
+    margin: 80px 0;
+    padding: 20px;
+    border: 1px solid blue;
+    border-radius: 5px;
+}
+.project:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    transform: translateY(-20px);
+}
+.project>h1{
+    font-size: 2rem;
+    text-align: center;
+}
+/* ......Service------ page closed............. */
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------FAQ Start-------  */
+.FAQ h1{
+    font-size: 35px;
+    font-family: 'Reggae One', cursive;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.FAQ h1:before, .FAQ h1:after {
+    content: "";
+    flex: 0.4 1;
+    border-bottom: 3px solid cornflowerblue;
+    margin: auto;
+}
+
+
+.accordion{
+    max-width: 800px;
+}
+
+.accordion .contentBx{
+    position: relative;
+    margin: 10px 20px;
+}
+
+.accordion .contentBx .label{
+    position: relative;
+    padding: 10px;
+    background:#16c9f6 ;
+    color: #fff;
+    cursor: pointer;
+}
+.accordion .contentBx .label::before{
+    content: "+";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+}
+.accordion .contentBx.active .label::before{
+    content: "-";
+}
+.accordion .contentBx .content{
+    position: relative;
+    background:#fff ;
+    color: #262626;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+}
+.accordion .contentBx.active .content{
+    height: 100px;
+    padding: 10px;
+}
+
+/* ------------FAQ Close------ */
+
+
+
+
+
+
+
+
+
+
+/* top btn start */
+#top{
+    display: none;
+    font-size: 30px;
+
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    z-index: 99;
+    border: none;
+    color: #16c9f6;
+    cursor: pointer;
+}
+
+
+/* top btn end */
+
+
+
+
+
+/* fotter start */
+
+
+.fott>h3{
+    font-weight: bold;
+    color: #16c9f6;
+    font-family:'Reggae One', cursive ;
+}
+
+
+/* for follow us social media buttons */
+.fott>ul {
+    padding-top: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+.fott>  ul li {
+    list-style: none;
+    padding-top: 3px;
+  }
+  
+.fott>  ul li a {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    padding-top: 7px;
+    line-height: 10px;
+    font-size: 15px;
+    margin: 0 10px;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #fff;
+    z-index: 1;
+  }
+  
+.fott>  ul li a .icon {
+    position: relative;
+    color: #262626;
+    transition: .5s;
+    z-index: 3;
+  }
+  
+.fott>  ul li a:hover .icon {
+    color: #fff;
+    transform: rotateY(360deg);
+  }
+  
+.fott>  ul li a:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    transition: .5s;
+    z-index: 2;
+  }
+  
+.fott>  ul li a:hover:before {
+    top: 0;
+  }
+  
+.fott>  ul li:nth-child(1) a:before{
+    background: #3b5999;
+  }
+  
+.fott>  ul li:nth-child(2) a:before{
+    background: #55acee;
+  }
+  
+.fott>  ul li:nth-child(3) a:before {
+    background: #0077b5;
+  }
+  
+.fott>  ul li:nth-child(4) a:before {
+    background: #dd4b39;
+  }
+
+
+
+
+/* fotter end */
